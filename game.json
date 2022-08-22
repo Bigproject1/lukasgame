@@ -141,7 +141,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.4487999999999985,
+        "zoomFactor": 0.3639999999999985,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -188,7 +188,7 @@
           "name": "HratText",
           "persistentUuid": "5ab15ae1-d668-4bf4-87ee-ee8da01a7660",
           "width": 0,
-          "x": 591,
+          "x": 599,
           "y": 334,
           "zOrder": 3,
           "numberProperties": [],
@@ -220,9 +220,25 @@
           "name": "jmeno",
           "persistentUuid": "862ecbc8-3b6c-4c8e-90ed-df13c654fea3",
           "width": 0,
-          "x": 415,
+          "x": 443,
           "y": 110,
           "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "HratText",
+          "persistentUuid": "62a09311-aeb6-432e-b2c9-34a01e1be6c6",
+          "width": 0,
+          "x": 599,
+          "y": 334,
+          "zOrder": 3,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -447,13 +463,6 @@
               ]
             }
           ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::JsCode",
-          "inlineCode": "const obj = runtimeScene.getObjects(\"jmeno\");\nobj.setX((window.screen.availWidth - obj.getWidth())/2);\nobj.setY((window.screen.availHeight - obj.getHeight())/2);",
-          "parameterObjects": "",
-          "useStrict": true,
-          "eventsSheetExpanded": false
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -825,6 +834,8 @@
           "effects": [],
           "behaviors": [
             {
+              "name": "PlatformerObject",
+              "type": "PlatformBehavior::PlatformerObjectBehavior",
               "acceleration": 1500,
               "canGoDownFromJumpthru": true,
               "canGrabPlatforms": false,
@@ -837,9 +848,7 @@
               "ladderClimbingSpeed": 150,
               "maxFallingSpeed": 700,
               "maxSpeed": 250,
-              "name": "PlatformerObject",
               "slopeMaxAngle": 60,
-              "type": "PlatformBehavior::PlatformerObjectBehavior",
               "useLegacyTrajectory": false,
               "xGrabTolerance": 10,
               "yGrabOffset": 0
@@ -889,10 +898,10 @@
           "effects": [],
           "behaviors": [
             {
-              "canBeGrabbed": true,
               "name": "Platform",
-              "platformType": "NormalPlatform",
               "type": "PlatformBehavior::PlatformBehavior",
+              "canBeGrabbed": true,
+              "platformType": "NormalPlatform",
               "yGrabOffset": 0
             }
           ]
